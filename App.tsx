@@ -13,8 +13,7 @@ import { ScreenShareModal } from './components/ScreenShareModal';
 import conocimiento_camila from './TesosComparar/Tesis.Comapara.md?raw';
 import conocimiento_asistentedavid from './PensamientosPEA/asistente.david.md?raw';
 import conocimiento_asistenteagostin from './PensamientosPEA/asistente.agostin.md?raw';
-import Conocimiento_Planificacion_Microcurricular_Ingles_8vo from './PensamientosPEA/Planificacion_Microcurricular_Ingles_8vo.md?raw';
-import Conocimiento_Planificacion_Microcurricular_Ingles_9no from './PensamientosPEA/planificacion_microcurricular_Igles_9no.md?raw';
+// Las planificaciones ahora se cargan dinámicamente mediante la herramienta consultar_planificacion en useGeminiLive.ts
 const ASSISTANTS: Assistant[] = [
   {
     id: 'Agostin',
@@ -25,17 +24,11 @@ const ASSISTANTS: Assistant[] = [
     systemInstruction: `
       ${conocimiento_asistenteagostin}
     
-      === INICIO DE CONOCIMIENTO ACADÉMICO (1 ASIGNATURAS) ===
-      
-      
-      ${Conocimiento_Planificacion_Microcurricular_Ingles_8vo}
-      ${Conocimiento_Planificacion_Microcurricular_Ingles_9no}
+      === INICIO DE CONOCIMIENTO ACADÉMICO ===
+      Tienes acceso a una herramienta llamada "consultar_planificacion". 
+      ÚSALA SIEMPRE que un estudiante te pregunte sobre temas de clase, qué van a aprender, o planificaciones de inglés (para 8vo, 9no, 2do bachillerato o 3ro bachillerato). 
+      NO asumas los temas de clase; llama a la herramienta para leer la planificación curricular antes de responder y adaptarte a lo que el estudiante pida repasar.
       === FIN DE CONOCIMIENTO ACADÉMICO ===
-
-      Otras referencias de conocimiento adicional:
-
-    
-      Recuerda: Basa tus respuestas en la información académica proporcionada arriba.
     `
   },
 
